@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  tests:
+    build: .
+    environment:
+      BASE_URL: https://www.saucedemo.com
+      BROWSER_TYPE: chromium
+      HEADLESS: "true"
+      LOG_LEVEL: info
+    volumes:
+      - ./html-test-report:/app/html-test-report
+      - ./logs:/app/logs
+      - ./coverage:/app/coverage
+    networks:
+      - automation
+
+networks:
+  automation:
+    driver: bridge

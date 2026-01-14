@@ -1,0 +1,57 @@
+{
+  "name": "ecommerce-test-automation",
+  "version": "2.0.0",
+  "description": "Professional SDET Test Automation Framework with Playwright, Jest and TypeScript",
+  "main": "index.js",
+  "author": "Rudra Kumar Pandey",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rudr19/ecommerce-test-automation"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:parallel": "jest --maxWorkers=4",
+    "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand",
+    "test:coverage": "jest --coverage",
+    "test:products": "jest tests/productNames.test.ts",
+    "test:cart": "jest tests/addToCart.test.ts",
+    "test:colors": "jest tests/toggleProductColour.test.ts",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write \"pages/**/*.ts\" \"tests/**/*.ts\" \"utils/**/*.ts\"",
+    "type-check": "tsc --noEmit",
+    "build": "tsc"
+  },
+  "keywords": [
+    "Playwright",
+    "Jest",
+    "TypeScript",
+    "Test Automation",
+    "SDET",
+    "E2E Testing"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-typescript": "^7.26.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^22.10.0",
+    "@typescript-eslint/eslint-plugin": "^8.17.0",
+    "@typescript-eslint/parser": "^8.17.0",
+    "babel-jest": "^27.5.1",
+    "eslint": "^9.16.0",
+    "jest": "^27.5.1",
+    "jest-html-reporters": "^2.1.0",
+    "jest-playwright-preset": "^1.7.0",
+    "playwright": "^1.48.0",
+    "prettier": "^3.3.3",
+    "ts-jest": "^27.1.5",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "winston": "^3.14.2"
+  }
+}
